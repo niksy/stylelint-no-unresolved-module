@@ -1,0 +1,10 @@
+{
+	"exports": {
+		".": {
+			"style": "shelby.css"
+		},
+		"./shelby.css": {
+			"style": "shelby.css"
+		}
+	}
+}

@@ -2,8 +2,22 @@
 
 [![Build Status][ci-img]][ci]
 
-Ensures an module (import-like or `url`) can be resolved to a module on the
-local filesystem.
+Ensures that module (import-like or `url`) can be resolved to a module on the
+file system.
+
+Nodes which are considered "modules":
+
+-   `@import` at-rule in CSS and SCSS files
+-   `@use` and `@forward` at-rule as
+    [Sass modules](https://sass-lang.com/documentation/modules)
+-   `url` declaration value for
+    [various declaration properties](<https://developer.mozilla.org/en-US/docs/Web/CSS/url()>)
+
+Features:
+
+-   [`enhanced-resolve`](https://github.com/webpack/enhanced-resolve) to resolve
+    each resource
+-   Handling partials for Sass files
 
 ## Install
 
@@ -13,80 +27,101 @@ npm install stylelint-no-unresolved-module --save
 
 ## Usage
 
-```js
-// Module usage
+Add this config to your `.stylelintrc`:
+
+```json
+{
+	"plugins": ["stylelint-no-unresolved-module"],
+	"rules": {
+		"plugin/no-unresolved-module": {
+			"alias": {
+				"assets": "pebbles"
+			},
+			"modules": ["node_modules", "local_modules"]
+		}
+	}
+}
 ```
 
-More usage examples.
+Assuming file system like this:
 
-## API
+```
+.
+├── package.json
+├── index.css
+├── milo/
+│   └── macy.css
+├── node_modules/
+│   └── josie/
+│       ├── package.json
+│       ├── rusty.css
+│       └── index.css
+└── local_modules/
+    ├── pebbles/
+    │   └── tucker.png
+    └── shelby/
+        └── shelby.css
+```
 
-### methodName(arg, [optionalArg])
+Assuming code is run from `./index.css`:
 
-Returns: `Mixed`
+```css
+/**
+ * These resources can be resolved */
 
-Method description.
+@import url('josie');
+@import url('shelby/shelby.css');
+@import url('./milo/macy.css');
 
-#### arg
+body {
+	background: url('assets/tucker.jpg');
+}
 
-Type: `Mixed`
+/**
+ * These resources can’t be resolved */
 
-arg description.
+@import url('shelby');
+@import url('josie/misty.css');
+@import url('./milo/index.css');
 
-#### optionalArg
+body {
+	background: url('assets/sandy.jpg');
+}
+```
+
+## Options
+
+Plugin accepts either boolean (`true`) or object configuration.
+
+If boolean, it will use default configuration:
+
+-   No aliases
+-   Look only inside `node_modules` for non-relative resource paths
+
+If object configuration, following properties are valid:
+
+### cwd
+
+Type: `string`  
+Default: `process.cwd()`
+
+Root directory from where to start resolving resources. If it’s not defined,
+directory of file will be used. Useful for situations where you don’t have
+original file.
+
+### alias
 
 Type: `Object`
 
-optionalArg description.
+A list of module alias configurations or an object which maps key to value. See
+[original documentation](https://github.com/webpack/enhanced-resolve#resolver-options).
 
-##### prop1
+### modules
 
-Type: `String`  
-Default: `'3'`
+Type: `string[]`
 
-`prop1` description.
-
-##### prop2
-
-Type: `Number`  
-Default: `3`
-
-##### prop3
-
-Type: `Number[]`  
-Default: `[1, 2, 3]`
-
-##### prop4
-
-Type: `Number[]` `String[]`  
-Default: `['1', '2', '3']`
-
-`prop4` description.
-
-##### prop5
-
-Type: `Function`  
-Default: `noop`
-
-`prop5` description.
-
-Function arguments:
-
--   **arg1** `String` arg1 description
--   **arg2** `Number` arg2 description
--   **arg3** `Element` `Boolean` arg3 description
-
-> Alternative approach
-
-| Property | Type                  | Default           | Description                                              |
-| -------- | --------------------- | ----------------- | -------------------------------------------------------- |
-| `prop1`  | `String`              | `'3'`             | `prop1` description.                                     |
-| `prop2`  | `Number`              | `3`               | `prop2` description.                                     |
-| `prop3`  | `Number[]`            | `[1, 2, 3]`       | `prop3` description.                                     |
-| `prop4`  | `Number[]` `String[]` | `['1', '2', '3']` | `prop4` description.                                     |
-| `prop5`  | `Function`            | `noop`            | `prop5` description. (No function arguments description) |
-
----
+A list of directories to resolve modules from. See
+[original documentation](https://github.com/webpack/enhanced-resolve#resolver-options).
 
 ## License
 

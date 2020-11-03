@@ -9,6 +9,7 @@ module.exports = {
 		{
 			file: 'cjs/index.js',
 			format: 'cjs',
+			exports: 'auto',
 			sourcemap: true
 		},
 		{
