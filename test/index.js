@@ -28,7 +28,19 @@ runFileTest({
 					'Unable to resolve path to import "./marley/index.css".'
 				),
 				messages.report(
+					'Unable to resolve path to import "josie/millie.css".'
+				),
+				messages.report(
+					'Unable to resolve path to import "shelby/index.css".'
+				),
+				messages.report(
 					'Unable to resolve path to resource "phoebe/annie.css".'
+				),
+				messages.report(
+					'Unable to resolve path to resource "elvis/riley.css".'
+				),
+				messages.report(
+					'Unable to resolve path to resource "elvis/jax.css".'
 				)
 			]
 		},
@@ -36,17 +48,30 @@ runFileTest({
 			files: './fixtures/reject.scss',
 			messages: [
 				messages.report(
+					'Unable to resolve path to import "./marley/index.css".'
+				),
+				messages.report(
+					'Unable to resolve path to import "josie/millie.css".'
+				),
+				messages.report(
+					'Unable to resolve path to import "shelby/index.css".'
+				),
+				messages.report(
+					'Unable to resolve path to resource "phoebe/annie.css".'
+				),
+				messages.report(
+					'Unable to resolve path to resource "elvis/riley.css".'
+				),
+				messages.report(
+					'Unable to resolve path to resource "elvis/jax.css".'
+				),
+				messages.report(
 					'Unable to resolve path to import "loki/rudy".'
 				),
 				messages.report(
 					'Unable to resolve path to module "loki/rudy".'
 				),
-				messages.report(
-					'Unable to resolve path to module "loki/rudy".'
-				),
-				messages.report(
-					'Unable to resolve path to resource "phoebe/annie.css".'
-				)
+				messages.report('Unable to resolve path to module "loki/rudy".')
 			]
 		}
 	]
@@ -85,6 +110,9 @@ runCodeTest({
 		},
 		{
 			code: '@import url("//chico.com");'
+		},
+		{
+			code: '@import url("./") screen and (orientation:landscape);'
 		},
 		{
 			code: '@import "loki";'

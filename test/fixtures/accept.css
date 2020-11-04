@@ -1,4 +1,13 @@
+@import url('./index.css');
+@import url('./');
 @import url('josie');
 @import url('josie/rusty.css');
-@import url('./');
-@import url('./index.css');
+@import url('shelby');
+@import url('shelby/shelby.css');
+@import url('./milo/macy.css');
+@import url('//chico.com');
+@import url('./') screen and (orientation:landscape);
+
+body {
+	background: url('lulu/annie.css');
+}

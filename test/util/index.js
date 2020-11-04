@@ -21,8 +21,16 @@ export const runCodeTest = (options = {}) => {
 					}
 				}
 			});
-			assert.equal(warnings.length, 0);
-			assert.equal(parseErrors.length, 0);
+			assert.equal(
+				warnings.length,
+				0,
+				`Accept case contains warnings, expected 0, got ${warnings.length}`
+			);
+			assert.equal(
+				parseErrors.length,
+				0,
+				`Accept case contains parse errors, expected 0, got ${parseErrors.length}`
+			);
 		});
 	});
 
@@ -41,7 +49,7 @@ export const runCodeTest = (options = {}) => {
 				}
 			});
 			const [{ text }] = warnings;
-			assert.equal(text, message);
+			assert.equal(text, message, 'Expected different warning message');
 		});
 	});
 };
@@ -63,8 +71,16 @@ export const runFileTest = (options = {}) => {
 					}
 				}
 			});
-			assert.equal(warnings.length, 0);
-			assert.equal(parseErrors.length, 0);
+			assert.equal(
+				warnings.length,
+				0,
+				`Accept case contains warnings, expected 0, got ${warnings.length}`
+			);
+			assert.equal(
+				parseErrors.length,
+				0,
+				`Accept case contains parse errors, expected 0, got ${parseErrors.length}`
+			);
 		});
 	});
 
@@ -82,9 +98,21 @@ export const runFileTest = (options = {}) => {
 					}
 				}
 			});
-			assert.equal(warnings.length, messages.length);
+			assert.equal(
+				warnings.length,
+				messages.length,
+				`Not all warnings have been covered for reject case`
+			);
+			assert.equal(
+				parseErrors.length,
+				0,
+				`Reject case contains parse errors, expected 0, got ${parseErrors.length}`
+			);
 			warnings.forEach(({ text }) => {
-				assert.ok(messages.find((message) => message === text));
+				assert.ok(
+					messages.find((message) => message === text),
+					`Warning is not covered: "${text}"`
+				);
 			});
 		});
 	});

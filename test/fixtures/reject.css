@@ -1,5 +1,13 @@
 @import url('./marley/index.css');
+@import url('josie/millie.css');
+@import url('shelby/index.css');
 
 body {
 	background: url('phoebe/annie.css');
+}
+
+@font-face {
+	font-family: 'Open Sans';
+	src: url('elvis/riley.css') format('woff2'),
+		url('elvis/jax.css') format('woff');
 }

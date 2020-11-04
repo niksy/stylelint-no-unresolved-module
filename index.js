@@ -117,6 +117,7 @@ const plugin = stylelint.createPlugin(
 					ruleName: ruleName,
 					result: result,
 					node: rootNode,
+					word: value,
 					message: messages.report(message(value, rootNode))
 				});
 			}
