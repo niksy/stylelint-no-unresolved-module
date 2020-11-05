@@ -2,6 +2,11 @@
 
 ## [Unreleased][]
 
+### Fixed
+
+-   Make fixtures `node_modules` available in project
+    ([#1](https://github.com/niksy/stylelint-no-unresolved-module/pull/1))
+
 ## [1.0.0][] - 2020-11-05
 
 ### Added
