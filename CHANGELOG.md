@@ -2,6 +2,8 @@
 
 ## [Unreleased][]
 
+## [1.0.1][] - 2020-11-05
+
 ### Fixed
 
 -   Make fixtures `node_modules` available in project
@@ -16,3 +18,6 @@
 [unreleased]:
 	https://github.com/niksy/stylelint-no-unresolved-module/compare/v1.0.0...HEAD
 [1.0.0]: https://github.com/niksy/stylelint-no-unresolved-module/tree/v1.0.0
+[unreleased]:
+	https://github.com/niksy/stylelint-no-unresolved-module/compare/v1.0.1...HEAD
+[1.0.1]: https://github.com/niksy/stylelint-no-unresolved-module/tree/v1.0.1
