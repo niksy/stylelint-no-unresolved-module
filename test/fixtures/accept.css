@@ -10,4 +10,5 @@
 
 body {
 	background: url('lulu/annie.css');
+	background: url(../fixtures/index.css);
 }

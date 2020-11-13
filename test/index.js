@@ -149,6 +149,9 @@ runCodeTest({
 		},
 		{
 			code: 'body { background: url("lulu/#{$heidi}.css"); }'
+		},
+		{
+			code: 'body { background: url(../fixtures/index.css); }'
 		}
 	],
 	reject: [
