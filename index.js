@@ -103,15 +103,17 @@ const plugin = stylelint.createPlugin(
 						topNode.value === 'url'
 					) {
 						const [node] = topNode.nodes;
-						const value = [nodeResolver.resolve(node, decl)].find(
-							(entry) => entry !== false
-						);
-						if (typeof value !== 'undefined') {
-							values.push({
-								rootNode: decl,
-								value: node.value,
-								...value
-							});
+						if (sassResolver.isStaticString(node.value)) {
+							const value = [
+								nodeResolver.resolve(node, decl)
+							].find((entry) => entry !== false);
+							if (typeof value !== 'undefined') {
+								values.push({
+									rootNode: decl,
+									value: node.value,
+									...value
+								});
+							}
 						}
 					}
 				});

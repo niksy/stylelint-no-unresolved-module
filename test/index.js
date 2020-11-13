@@ -140,6 +140,15 @@ runCodeTest({
 		},
 		{
 			code: 'body { background: url("lulu/annie.css"); }'
+		},
+		{
+			code: 'body { background: url($heidi); }'
+		},
+		{
+			code: 'body { background: url(#{$heidi}); }'
+		},
+		{
+			code: 'body { background: url("lulu/#{$heidi}.css"); }'
 		}
 	],
 	reject: [

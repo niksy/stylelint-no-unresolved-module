@@ -13,4 +13,7 @@
 
 body {
 	background: url('lulu/annie.css');
+	background: url($heidi);
+	background: url(#{$heidi});
+	background: url('lulu/#{$heidi}.css');
 }
