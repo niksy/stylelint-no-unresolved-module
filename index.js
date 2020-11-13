@@ -25,9 +25,22 @@ const validateOptions = ajv.compile({
 				},
 				alias: {
 					type: 'object',
-					patternProperties: {
-						'.+': { type: 'string' }
-					}
+					'anyOf': [
+						{
+							patternProperties: {
+								'.+': { type: 'string' }
+							}
+						},
+						{
+							patternProperties: {
+								'.+': {
+									type: 'array',
+									minItems: 1,
+									items: { type: 'string' }
+								}
+							}
+						}
+					]
 				}
 			}
 		}
