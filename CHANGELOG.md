@@ -2,6 +2,8 @@
 
 ## [Unreleased][]
 
+## [1.1.1][] - 2020-11-13
+
 ### Fixed
 
 -   Parsing unqouted `url` values
@@ -34,3 +36,6 @@
 [1.0.0]: https://github.com/niksy/stylelint-no-unresolved-module/tree/v1.0.0
 [1.0.1]: https://github.com/niksy/stylelint-no-unresolved-module/tree/v1.0.1
 [1.1.0]: https://github.com/niksy/stylelint-no-unresolved-module/tree/v1.1.0
+[unreleased]:
+	https://github.com/niksy/stylelint-no-unresolved-module/compare/v1.1.1...HEAD
+[1.1.1]: https://github.com/niksy/stylelint-no-unresolved-module/tree/v1.1.1
