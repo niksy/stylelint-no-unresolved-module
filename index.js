@@ -1,7 +1,16 @@
+/**
+ * @typedef {import('postcss').ChildNode} postcss.ChildNode
+ * @typedef {{
+ *   rootNode: postcss.ChildNode,
+ *   value: string,
+ *   promise: Promise<string>,
+ *   message: (resource: string, rootNode: postcss.ChildNode) => string
+ * }} ResolvedModule
+ */
+
 import Ajv from 'ajv';
 import stylelint from 'stylelint';
 import parse from 'postcss-value-parser';
-import allSettled from '@ungap/promise-all-settled';
 import NodeResolver from './lib/resolvers/node';
 import SassResolver from './lib/resolvers/sass';
 
@@ -56,7 +65,7 @@ const plugin = stylelint.createPlugin(
 	(resolveRules) => async (cssRoot, result) => {
 		const validOptions = stylelint.utils.validateOptions(result, ruleName, {
 			actual: resolveRules,
-			possible: validateOptions
+			possible: (value) => /** @type {boolean}*/ (validateOptions(value))
 		});
 
 		if (!validOptions) {
@@ -65,6 +74,7 @@ const plugin = stylelint.createPlugin(
 
 		const nodeResolver = new NodeResolver({ cssRoot, ...resolveRules });
 		const sassResolver = new SassResolver({ cssRoot, ...resolveRules });
+		/** @type {ResolvedModule[]} */
 		const values = [];
 
 		cssRoot.walkAtRules(
@@ -79,10 +89,10 @@ const plugin = stylelint.createPlugin(
 				parsed.walk((node) => {
 					if (node.type === 'string') {
 						const value = [
-							nodeResolver.resolve(node, atRule),
-							sassResolver.resolve(node, atRule)
+							nodeResolver.resolve(node.value, atRule),
+							sassResolver.resolve(node.value, atRule)
 						].find((entry) => entry !== false);
-						if (typeof value !== 'undefined') {
+						if (typeof value === 'object') {
 							values.push({
 								rootNode: atRule,
 								value: node.value,
@@ -105,9 +115,9 @@ const plugin = stylelint.createPlugin(
 						const [node] = topNode.nodes;
 						if (sassResolver.isStaticString(node.value)) {
 							const value = [
-								nodeResolver.resolve(node, decl)
+								nodeResolver.resolve(node.value, decl)
 							].find((entry) => entry !== false);
-							if (typeof value !== 'undefined') {
+							if (typeof value === 'object') {
 								values.push({
 									rootNode: decl,
 									value: node.value,
@@ -120,8 +130,7 @@ const plugin = stylelint.createPlugin(
 			}
 		});
 
-		const resolvedValues = await allSettled.call(
-			Promise,
+		const resolvedValues = await Promise.allSettled(
 			values.map(({ promise }) => promise)
 		);
 
