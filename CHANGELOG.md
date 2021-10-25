@@ -2,6 +2,8 @@
 
 ## [Unreleased][]
 
+## [2.0.0][] - 2021-10-25
+
 ### Added
 
 -   TypeScript types
@@ -49,3 +51,6 @@
 [unreleased]:
 	https://github.com/niksy/stylelint-no-unresolved-module/compare/v1.1.1...HEAD
 [1.1.1]: https://github.com/niksy/stylelint-no-unresolved-module/tree/v1.1.1
+[unreleased]:
+	https://github.com/niksy/stylelint-no-unresolved-module/compare/v2.0.0...HEAD
+[2.0.0]: https://github.com/niksy/stylelint-no-unresolved-module/tree/v2.0.0
