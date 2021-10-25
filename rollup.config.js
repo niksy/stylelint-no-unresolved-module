@@ -2,6 +2,7 @@
 
 const path = require('path');
 const { promises: fs } = require('fs');
+const { default: babel } = require('@rollup/plugin-babel');
 
 module.exports = {
 	input: 'index.js',
@@ -44,6 +45,10 @@ module.exports = {
 					}
 				}
 			};
-		})()
+		})(),
+		babel({
+			babelHelpers: 'bundled',
+			exclude: 'node_modules/**'
+		})
 	]
 };

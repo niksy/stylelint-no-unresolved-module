@@ -14,64 +14,130 @@ runFileTest({
 	},
 	accept: [
 		{
-			files: './fixtures/accept.css'
+			input: './fixtures/accept.css',
+			result: []
 		},
 		{
-			files: './fixtures/accept.scss'
+			input: './fixtures/accept.scss',
+			customSyntax: 'postcss-scss',
+			result: []
 		}
 	],
 	reject: [
 		{
-			files: './fixtures/reject.css',
-			messages: [
-				messages.report(
-					'Unable to resolve path to import "./marley/index.css".'
-				),
-				messages.report(
-					'Unable to resolve path to import "josie/millie.css".'
-				),
-				messages.report(
-					'Unable to resolve path to import "shelby/index.css".'
-				),
-				messages.report(
-					'Unable to resolve path to resource "phoebe/annie.css".'
-				),
-				messages.report(
-					'Unable to resolve path to resource "elvis/riley.css".'
-				),
-				messages.report(
-					'Unable to resolve path to resource "elvis/jax.css".'
-				)
+			input: './fixtures/reject.css',
+			result: [
+				{
+					column: 14,
+					line: 1,
+					text: messages.report(
+						'Unable to resolve path to import "./marley/index.css".'
+					)
+				},
+				{
+					column: 14,
+					line: 2,
+					text: messages.report(
+						'Unable to resolve path to import "josie/millie.css".'
+					)
+				},
+				{
+					column: 14,
+					line: 3,
+					text: messages.report(
+						'Unable to resolve path to import "shelby/index.css".'
+					)
+				},
+				{
+					column: 19,
+					line: 6,
+					text: messages.report(
+						'Unable to resolve path to resource "phoebe/annie.css".'
+					)
+				},
+				{
+					column: 12,
+					line: 11,
+					text: messages.report(
+						'Unable to resolve path to resource "elvis/riley.css".'
+					)
+				},
+				{
+					column: 8,
+					line: 12,
+					text: messages.report(
+						'Unable to resolve path to resource "elvis/jax.css".'
+					)
+				}
 			]
 		},
 		{
-			files: './fixtures/reject.scss',
-			messages: [
-				messages.report(
-					'Unable to resolve path to import "./marley/index.css".'
-				),
-				messages.report(
-					'Unable to resolve path to import "josie/millie.css".'
-				),
-				messages.report(
-					'Unable to resolve path to import "shelby/index.css".'
-				),
-				messages.report(
-					'Unable to resolve path to resource "phoebe/annie.css".'
-				),
-				messages.report(
-					'Unable to resolve path to resource "elvis/riley.css".'
-				),
-				messages.report(
-					'Unable to resolve path to resource "elvis/jax.css".'
-				),
-				messages.report(
-					'Unable to resolve path to import "loki/rudy".'
-				),
-				messages.report(
-					'Unable to resolve path to module "loki/rudy".'
-				),
-				messages.report('Unable to resolve path to module "loki/rudy".')
+			input: './fixtures/reject.scss',
+			customSyntax: 'postcss-scss',
+			result: [
+				{
+					column: 14,
+					line: 1,
+					text: messages.report(
+						'Unable to resolve path to import "./marley/index.css".'
+					)
+				},
+				{
+					column: 14,
+					line: 2,
+					text: messages.report(
+						'Unable to resolve path to import "josie/millie.css".'
+					)
+				},
+				{
+					column: 14,
+					line: 3,
+					text: messages.report(
+						'Unable to resolve path to import "shelby/index.css".'
+					)
+				},
+				{
+					column: 10,
+					line: 5,
+					text: messages.report(
+						'Unable to resolve path to import "loki/rudy".'
+					)
+				},
+				{
+					column: 7,
+					line: 6,
+					text: messages.report(
+						'Unable to resolve path to module "loki/rudy".'
+					)
+				},
+				{
+					column: 11,
+					line: 7,
+					text: messages.report(
+						'Unable to resolve path to module "loki/rudy".'
+					)
+				},
+				{
+					column: 19,
+					line: 10,
+					text: messages.report(
+						'Unable to resolve path to resource "phoebe/annie.css".'
+					)
+				},
+				{
+					column: 12,
+					line: 15,
+					text: messages.report(
+						'Unable to resolve path to resource "elvis/riley.css".'
+					)
+				},
+				{
+					column: 8,
+					line: 16,
+					text: messages.report(
+						'Unable to resolve path to resource "elvis/jax.css".'
+					)
+				}
 			]
 		}
 	]
@@ -88,114 +154,178 @@ runCodeTest({
 	},
 	accept: [
 		{
-			code: '@import url("./index.css");'
+			input: '@import url("./index.css");',
+			result: []
 		},
 		{
-			code: '@import url("./");'
+			input: '@import url("./");',
+			result: []
 		},
 		{
-			code: '@import url("josie");'
+			input: '@import url("josie");',
+			result: []
 		},
 		{
-			code: '@import url("josie/rusty.css");'
+			input: '@import url("josie/rusty.css");',
+			result: []
 		},
 		{
-			code: '@import url("shelby");'
+			input: '@import url("shelby");',
+			result: []
 		},
 		{
-			code: '@import url("shelby/shelby.css");'
+			input: '@import url("shelby/shelby.css");',
+			result: []
 		},
 		{
-			code: '@import url("./milo/macy.css");'
+			input: '@import url("./milo/macy.css");',
+			result: []
 		},
 		{
-			code: '@import url("//chico.com");'
+			input: '@import url("//chico.com");',
+			result: []
 		},
 		{
-			code: '@import url("./") screen and (orientation:landscape);'
+			input: '@import url("./") screen and (orientation:landscape);',
+			result: []
 		},
 		{
-			code: '@import "loki";'
+			input: '@import "loki";',
+			result: []
 		},
 		{
-			code: '@import "loki/index";'
+			input: '@import "loki/index";',
+			result: []
 		},
 		{
-			code: '@import "loki/_index";'
+			input: '@import "loki/_index";',
+			result: []
 		},
 		{
-			code: '@import "loki/_index.scss";'
+			input: '@import "loki/_index.scss";',
+			result: []
 		},
 		{
-			code: '@use "sass:list";'
+			input: '@use "sass:list";',
+			result: []
 		},
 		{
-			code: '@forward "sass:list";'
+			input: '@forward "sass:list";',
+			result: []
 		},
 		{
-			code: '@use "loki";'
+			input: '@use "loki";',
+			result: []
 		},
 		{
-			code: '@forward "loki";'
+			input: '@forward "loki";',
+			result: []
 		},
 		{
-			code: 'body { background: url("lulu/annie.css"); }'
+			input: 'body { background: url("lulu/annie.css"); }',
+			result: []
 		},
 		{
-			code: 'body { background: url($heidi); }'
+			input: 'body { background: url($heidi); }',
+			result: []
 		},
 		{
-			code: 'body { background: url(#{$heidi}); }'
+			input: 'body { background: url(#{$heidi}); }',
+			result: []
 		},
 		{
-			code: 'body { background: url("lulu/#{$heidi}.css"); }'
+			input: 'body { background: url("lulu/#{$heidi}.css"); }',
+			result: []
 		},
 		{
-			code: 'body { background: url(../fixtures/index.css); }'
+			input: 'body { background: url(../fixtures/index.css); }',
+			result: []
 		}
 	],
 	reject: [
 		{
-			code: '@import url("./marley/index.css");',
-			message: messages.report(
-				'Unable to resolve path to import "./marley/index.css".'
-			)
+			input: '@import url("./marley/index.css");',
+			result: [
+				{
+					column: 14,
+					line: 1,
+					text: messages.report(
+						'Unable to resolve path to import "./marley/index.css".'
+					)
+				}
+			]
 		},
 		{
-			code: '@import url("josie/millie.css");',
-			message: messages.report(
-				'Unable to resolve path to import "josie/millie.css".'
-			)
+			input: '@import url("josie/millie.css");',
+			result: [
+				{
+					column: 14,
+					line: 1,
+					text: messages.report(
+						'Unable to resolve path to import "josie/millie.css".'
+					)
+				}
+			]
 		},
 		{
-			code: '@import url("shelby/index.css");',
-			message: messages.report(
-				'Unable to resolve path to import "shelby/index.css".'
-			)
+			input: '@import url("shelby/index.css");',
+			result: [
+				{
+					column: 14,
+					line: 1,
+					text: messages.report(
+						'Unable to resolve path to import "shelby/index.css".'
+					)
+				}
+			]
 		},
 		{
-			code: '@import "loki/rudy";',
-			message: messages.report(
-				'Unable to resolve path to import "loki/rudy".'
-			)
+			input: '@import "loki/rudy";',
+			result: [
+				{
+					column: 10,
+					line: 1,
+					text: messages.report(
+						'Unable to resolve path to import "loki/rudy".'
+					)
+				}
+			]
 		},
 		{
-			code: '@use "loki/rudy";',
-			message: messages.report(
-				'Unable to resolve path to module "loki/rudy".'
-			)
+			input: '@use "loki/rudy";',
+			result: [
+				{
+					column: 7,
+					line: 1,
+					text: messages.report(
+						'Unable to resolve path to module "loki/rudy".'
+					)
+				}
+			]
 		},
 		{
-			code: '@forward "loki/rudy";',
-			message: messages.report(
-				'Unable to resolve path to module "loki/rudy".'
-			)
+			input: '@forward "loki/rudy";',
+			result: [
+				{
+					column: 11,
+					line: 1,
+					text: messages.report(
+						'Unable to resolve path to module "loki/rudy".'
+					)
+				}
+			]
 		},
 		{
-			code: 'body { background: url("phoebe/annie.css"); }',
-			message: messages.report(
-				'Unable to resolve path to resource "phoebe/annie.css".'
-			)
+			input: 'body { background: url("phoebe/annie.css"); }',
+			result: [
+				{
+					column: 25,
+					line: 1,
+					text: messages.report(
+						'Unable to resolve path to resource "phoebe/annie.css".'
+					)
+				}
+			]
 		}
 	]
 });

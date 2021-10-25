@@ -129,7 +129,7 @@ MIT © [Ivan Nikolić](http://ivannikolic.com)
 
 <!-- prettier-ignore-start -->
 
-[ci]: https://travis-ci.com/niksy/stylelint-no-unresolved-module
-[ci-img]: https://travis-ci.com/niksy/stylelint-no-unresolved-module.svg?branch=master
+[ci]: https://github.com/niksy/stylelint-no-unresolved-module/actions?query=workflow%3ACI
+[ci-img]: https://github.com/niksy/stylelint-no-unresolved-module/workflows/CI/badge.svg?branch=master
 
 <!-- prettier-ignore-end -->

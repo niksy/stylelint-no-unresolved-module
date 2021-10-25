@@ -139,6 +139,5 @@ const plugin = stylelint.createPlugin(
 		});
 	}
 );
-plugin.messages = messages;
 
-export default plugin;
+export default { ...plugin, messages };
