@@ -2,6 +2,16 @@
 
 ## [Unreleased][]
 
+### Added
+
+-   TypeScript types
+
+### Changed
+
+-   **Breaking**: Supports Node >= 12
+-   **Breaking**: Supports Stylelint >= 14
+-   Upgrade package
+
 ## [1.1.1][] - 2020-11-13
 
 ### Fixed
