@@ -2,6 +2,10 @@
 
 ## [Unreleased][]
 
+### Added
+
+-   Support for `enhanced-resolve` roots option
+
 ## [2.0.0][] - 2021-10-25
 
 ### Added

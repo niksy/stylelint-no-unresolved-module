@@ -373,3 +373,41 @@ runCodeTest({
 		}
 	]
 });
+
+runCodeTest({
+	ruleName: ruleName,
+	config: {
+		cwd: path.resolve(__dirname, 'fixtures'),
+		roots: ['local_modules'],
+		alias: {
+			'assets': ['theme/assets', '/assets']
+		},
+		modules: ['node_modules', 'local_modules']
+	},
+	accept: [
+		{
+			input: 'body { background: url("assets/annie.css"); }',
+			result: []
+		},
+		{
+			input: 'body { background: url("assets/jasmine.css"); }',
+			result: []
+		}
+	],
+	reject: [
+		{
+			input: 'body { background: url("assets/trixie.css"); }',
+			result: [
+				{
+					column: 25,
+					line: 1,
+					endColumn: 42,
+					endLine: 1,
+					text: messages.report(
+						'Unable to resolve path to resource "assets/trixie.css".'
+					)
+				}
+			]
+		}
+	]
+});

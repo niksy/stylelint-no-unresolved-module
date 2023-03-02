@@ -123,6 +123,13 @@ Type: `string[]`
 A list of directories to resolve modules from. See
 [original documentation](https://github.com/webpack/enhanced-resolve#resolver-options).
 
+### roots
+
+Type: `string[]`
+
+A list of root paths. See
+[original documentation](https://github.com/webpack/enhanced-resolve#resolver-options).
+
 ## License
 
 MIT © [Ivan Nikolić](http://ivannikolic.com)

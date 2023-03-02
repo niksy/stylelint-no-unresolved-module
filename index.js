@@ -32,6 +32,13 @@ const validateOptions = ajv.compile({
 					minItems: 1,
 					items: { type: 'string' }
 				},
+				roots: {
+					type: 'array',
+					minItems: 1,
+					items: {
+						type: 'string'
+					}
+				},
 				alias: {
 					type: 'object',
 					'anyOf': [
@@ -57,12 +64,14 @@ const validateOptions = ajv.compile({
 });
 
 const messages = stylelint.utils.ruleMessages(ruleName, {
-	report: (value) => value
+	report: (/** @type string */ value) => value
 });
 
-const plugin = stylelint.createPlugin(
-	ruleName,
-	(resolveRules) => async (cssRoot, result) => {
+/**
+ * @type {stylelint.RuleBase}
+ */
+function ruleFunction(resolveRules) {
+	return async function (cssRoot, result) {
 		const validOptions = stylelint.utils.validateOptions(result, ruleName, {
 			actual: resolveRules,
 			possible: (value) => /** @type {boolean}*/ (validateOptions(value))
@@ -146,7 +155,10 @@ const plugin = stylelint.createPlugin(
 				});
 			}
 		});
-	}
-);
+	};
+}
+
+// @ts-ignore
+const plugin = stylelint.createPlugin(ruleName, ruleFunction);
 
 export default { ...plugin, messages };
