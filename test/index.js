@@ -30,6 +30,8 @@ runFileTest({
 				{
 					column: 14,
 					line: 1,
+					endColumn: 32,
+					endLine: 1,
 					text: messages.report(
 						'Unable to resolve path to import "./marley/index.css".'
 					)
@@ -37,6 +39,8 @@ runFileTest({
 				{
 					column: 14,
 					line: 2,
+					endColumn: 30,
+					endLine: 2,
 					text: messages.report(
 						'Unable to resolve path to import "josie/millie.css".'
 					)
@@ -44,6 +48,8 @@ runFileTest({
 				{
 					column: 14,
 					line: 3,
+					endColumn: 30,
+					endLine: 3,
 					text: messages.report(
 						'Unable to resolve path to import "shelby/index.css".'
 					)
@@ -51,6 +57,8 @@ runFileTest({
 				{
 					column: 19,
 					line: 6,
+					endColumn: 35,
+					endLine: 6,
 					text: messages.report(
 						'Unable to resolve path to resource "phoebe/annie.css".'
 					)
@@ -58,6 +66,8 @@ runFileTest({
 				{
 					column: 12,
 					line: 11,
+					endColumn: 27,
+					endLine: 11,
 					text: messages.report(
 						'Unable to resolve path to resource "elvis/riley.css".'
 					)
@@ -65,6 +75,8 @@ runFileTest({
 				{
 					column: 8,
 					line: 12,
+					endColumn: 21,
+					endLine: 12,
 					text: messages.report(
 						'Unable to resolve path to resource "elvis/jax.css".'
 					)
@@ -78,6 +90,8 @@ runFileTest({
 				{
 					column: 14,
 					line: 1,
+					endColumn: 32,
+					endLine: 1,
 					text: messages.report(
 						'Unable to resolve path to import "./marley/index.css".'
 					)
@@ -85,6 +99,8 @@ runFileTest({
 				{
 					column: 14,
 					line: 2,
+					endColumn: 30,
+					endLine: 2,
 					text: messages.report(
 						'Unable to resolve path to import "josie/millie.css".'
 					)
@@ -92,6 +108,8 @@ runFileTest({
 				{
 					column: 14,
 					line: 3,
+					endColumn: 30,
+					endLine: 3,
 					text: messages.report(
 						'Unable to resolve path to import "shelby/index.css".'
 					)
@@ -99,6 +117,8 @@ runFileTest({
 				{
 					column: 10,
 					line: 5,
+					endColumn: 19,
+					endLine: 5,
 					text: messages.report(
 						'Unable to resolve path to import "loki/rudy".'
 					)
@@ -106,6 +126,8 @@ runFileTest({
 				{
 					column: 7,
 					line: 6,
+					endColumn: 16,
+					endLine: 6,
 					text: messages.report(
 						'Unable to resolve path to module "loki/rudy".'
 					)
@@ -113,6 +135,8 @@ runFileTest({
 				{
 					column: 11,
 					line: 7,
+					endColumn: 20,
+					endLine: 7,
 					text: messages.report(
 						'Unable to resolve path to module "loki/rudy".'
 					)
@@ -120,6 +144,8 @@ runFileTest({
 				{
 					column: 19,
 					line: 10,
+					endColumn: 35,
+					endLine: 10,
 					text: messages.report(
 						'Unable to resolve path to resource "phoebe/annie.css".'
 					)
@@ -127,6 +153,8 @@ runFileTest({
 				{
 					column: 12,
 					line: 15,
+					endColumn: 27,
+					endLine: 15,
 					text: messages.report(
 						'Unable to resolve path to resource "elvis/riley.css".'
 					)
@@ -134,6 +162,8 @@ runFileTest({
 				{
 					column: 8,
 					line: 16,
+					endColumn: 21,
+					endLine: 16,
 					text: messages.report(
 						'Unable to resolve path to resource "elvis/jax.css".'
 					)
@@ -249,6 +279,8 @@ runCodeTest({
 				{
 					column: 14,
 					line: 1,
+					endColumn: 32,
+					endLine: 1,
 					text: messages.report(
 						'Unable to resolve path to import "./marley/index.css".'
 					)
@@ -261,6 +293,8 @@ runCodeTest({
 				{
 					column: 14,
 					line: 1,
+					endColumn: 30,
+					endLine: 1,
 					text: messages.report(
 						'Unable to resolve path to import "josie/millie.css".'
 					)
@@ -273,6 +307,8 @@ runCodeTest({
 				{
 					column: 14,
 					line: 1,
+					endColumn: 30,
+					endLine: 1,
 					text: messages.report(
 						'Unable to resolve path to import "shelby/index.css".'
 					)
@@ -285,6 +321,8 @@ runCodeTest({
 				{
 					column: 10,
 					line: 1,
+					endColumn: 19,
+					endLine: 1,
 					text: messages.report(
 						'Unable to resolve path to import "loki/rudy".'
 					)
@@ -297,6 +335,8 @@ runCodeTest({
 				{
 					column: 7,
 					line: 1,
+					endColumn: 16,
+					endLine: 1,
 					text: messages.report(
 						'Unable to resolve path to module "loki/rudy".'
 					)
@@ -309,6 +349,8 @@ runCodeTest({
 				{
 					column: 11,
 					line: 1,
+					endColumn: 20,
+					endLine: 1,
 					text: messages.report(
 						'Unable to resolve path to module "loki/rudy".'
 					)
@@ -321,6 +363,8 @@ runCodeTest({
 				{
 					column: 25,
 					line: 1,
+					endColumn: 41,
+					endLine: 1,
 					text: messages.report(
 						'Unable to resolve path to resource "phoebe/annie.css".'
 					)
