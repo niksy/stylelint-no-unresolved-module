@@ -2,6 +2,8 @@
 
 ## [Unreleased][]
 
+## [2.1.0][] - 2023-03-02
+
 ### Added
 
 -   Support for `enhanced-resolve` roots option
@@ -58,3 +60,6 @@
 [unreleased]:
 	https://github.com/niksy/stylelint-no-unresolved-module/compare/v2.0.0...HEAD
 [2.0.0]: https://github.com/niksy/stylelint-no-unresolved-module/tree/v2.0.0
+[Unreleased]:
+	https://github.com/niksy/stylelint-no-unresolved-module/compare/v2.1.0...HEAD
+[2.1.0]: https://github.com/niksy/stylelint-no-unresolved-module/tree/v2.1.0
