@@ -2,6 +2,8 @@
 
 ## [Unreleased][]
 
+## [2.2.0][] - 2023-08-22
+
 ### Changed
 
 -   Allow Stylelint 15 as peer dependancy
@@ -62,3 +64,6 @@
 [1.1.1]: https://github.com/niksy/stylelint-no-unresolved-module/tree/v1.1.1
 [2.0.0]: https://github.com/niksy/stylelint-no-unresolved-module/tree/v2.0.0
 [2.1.0]: https://github.com/niksy/stylelint-no-unresolved-module/tree/v2.1.0
+[Unreleased]:
+	https://github.com/niksy/stylelint-no-unresolved-module/compare/v2.2.0...HEAD
+[2.2.0]: https://github.com/niksy/stylelint-no-unresolved-module/tree/v2.2.0
