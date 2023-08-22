@@ -2,6 +2,13 @@
 
 ## [Unreleased][]
 
+### Changed
+
+-   Allow Stylelint 15 as peer dependancy
+-   Update import statements to be ESM compatible
+-   Use pure ESM as default
+-   Upgrade package
+
 ## [2.1.0][] - 2023-03-02
 
 ### Added
@@ -49,17 +56,9 @@
 
 -   Initial implementation
 
-[unreleased]:
-	https://github.com/niksy/stylelint-no-unresolved-module/compare/v1.1.0...HEAD
 [1.0.0]: https://github.com/niksy/stylelint-no-unresolved-module/tree/v1.0.0
 [1.0.1]: https://github.com/niksy/stylelint-no-unresolved-module/tree/v1.0.1
 [1.1.0]: https://github.com/niksy/stylelint-no-unresolved-module/tree/v1.1.0
-[unreleased]:
-	https://github.com/niksy/stylelint-no-unresolved-module/compare/v1.1.1...HEAD
 [1.1.1]: https://github.com/niksy/stylelint-no-unresolved-module/tree/v1.1.1
-[unreleased]:
-	https://github.com/niksy/stylelint-no-unresolved-module/compare/v2.0.0...HEAD
 [2.0.0]: https://github.com/niksy/stylelint-no-unresolved-module/tree/v2.0.0
-[Unreleased]:
-	https://github.com/niksy/stylelint-no-unresolved-module/compare/v2.1.0...HEAD
 [2.1.0]: https://github.com/niksy/stylelint-no-unresolved-module/tree/v2.1.0
