@@ -5,6 +5,7 @@ import { runCodeTest, runFileTest } from './util/index.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
+// @ts-ignore
 const { ruleName, messages } = function_;
 
 runFileTest({
