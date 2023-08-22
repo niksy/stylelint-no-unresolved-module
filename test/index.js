@@ -1,6 +1,9 @@
 import path from 'path';
-import function_ from '../index';
-import { runCodeTest, runFileTest } from './util';
+import { fileURLToPath } from 'url';
+import function_ from '../index.js';
+import { runCodeTest, runFileTest } from './util/index.js';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const { ruleName, messages } = function_;
 

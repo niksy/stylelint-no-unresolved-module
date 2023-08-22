@@ -11,8 +11,8 @@
 import Ajv from 'ajv';
 import stylelint from 'stylelint';
 import parse from 'postcss-value-parser';
-import NodeResolver from './lib/resolvers/node';
-import SassResolver from './lib/resolvers/sass';
+import NodeResolver from './lib/resolvers/node.js';
+import SassResolver from './lib/resolvers/sass.js';
 
 const ruleName = 'plugin/no-unresolved-module';
 
