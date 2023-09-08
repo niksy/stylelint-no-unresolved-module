@@ -68,6 +68,17 @@ const messages = stylelint.utils.ruleMessages(ruleName, {
 });
 
 /**
+ * @param {string} value
+ */
+function isDataUrl(value) {
+	try {
+		return new URL(value).protocol === 'data:';
+	} catch {
+		return false;
+	}
+}
+
+/**
  * @type {stylelint.RuleBase}
  */
 function ruleFunction(resolveRules) {
@@ -122,7 +133,10 @@ function ruleFunction(resolveRules) {
 						topNode.value === 'url'
 					) {
 						const [node] = topNode.nodes;
-						if (sassResolver.isStaticString(node.value)) {
+						if (
+							sassResolver.isStaticString(node.value) &&
+							!isDataUrl(node.value)
+						) {
 							const value = [
 								nodeResolver.resolve(node.value, decl)
 							].find((entry) => entry !== false);

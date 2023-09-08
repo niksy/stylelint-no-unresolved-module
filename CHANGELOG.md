@@ -2,6 +2,11 @@
 
 ## [Unreleased][]
 
+### Fixed
+
+-   Ignore data URLs
+    ([#4](https://github.com/niksy/stylelint-no-unresolved-module/issues/4))
+
 ## [2.2.0][] - 2023-08-22
 
 ### Changed

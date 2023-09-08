@@ -274,6 +274,10 @@ runCodeTest({
 		{
 			input: 'body { background: url(../fixtures/index.css); }',
 			result: []
+		},
+		{
+			input: 'body { background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z/C/HgAGgwJ/lK3Q6wAAAABJRU5ErkJggg==); }',
+			result: []
 		}
 	],
 	reject: [
