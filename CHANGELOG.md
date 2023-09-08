@@ -2,6 +2,8 @@
 
 ## [Unreleased][]
 
+## [2.2.1][] - 2023-09-08
+
 ### Fixed
 
 -   Ignore data URLs
@@ -70,5 +72,9 @@
 [2.0.0]: https://github.com/niksy/stylelint-no-unresolved-module/tree/v2.0.0
 [2.1.0]: https://github.com/niksy/stylelint-no-unresolved-module/tree/v2.1.0
 [Unreleased]:
-	https://github.com/niksy/stylelint-no-unresolved-module/compare/v2.2.0...HEAD
+	https://github.com/niksy/stylelint-no-unresolved-module/compare/v2.2.1...HEAD
+[2.2.1]: https://github.com/niksy/stylelint-no-unresolved-module/tree/v2.2.1
+
+    https://github.com/niksy/stylelint-no-unresolved-module/compare/v2.2.0...HEAD
+
 [2.2.0]: https://github.com/niksy/stylelint-no-unresolved-module/tree/v2.2.0
