@@ -2,6 +2,8 @@
 
 ## [Unreleased][]
 
+## [2.3.0][] - 2024-08-23
+
 -   Add support for Sass `pkg:` URLs
 -   Expand condition names to include `default` export
 
@@ -81,7 +83,11 @@
 [2.0.0]: https://github.com/niksy/stylelint-no-unresolved-module/tree/v2.0.0
 [2.1.0]: https://github.com/niksy/stylelint-no-unresolved-module/tree/v2.1.0
 [Unreleased]:
-	https://github.com/niksy/stylelint-no-unresolved-module/compare/v2.2.2...HEAD
+	https://github.com/niksy/stylelint-no-unresolved-module/compare/v2.3.0...HEAD
+[2.3.0]: https://github.com/niksy/stylelint-no-unresolved-module/tree/v2.3.0
+
+    https://github.com/niksy/stylelint-no-unresolved-module/compare/v2.2.2...HEAD
+
 [2.2.2]: https://github.com/niksy/stylelint-no-unresolved-module/tree/v2.2.2
 
     https://github.com/niksy/stylelint-no-unresolved-module/compare/v2.2.1...HEAD
