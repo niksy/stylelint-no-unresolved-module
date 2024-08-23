@@ -2,6 +2,9 @@
 
 ## [Unreleased][]
 
+-   Add support for Sass `pkg:` URLs
+-   Expand condition names to include `default` export
+
 ## [2.2.2][] - 2024-02-26
 
 ### Changed
