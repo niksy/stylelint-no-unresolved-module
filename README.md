@@ -7,9 +7,11 @@ file system.
 
 Nodes which are considered "modules":
 
--   `@import` at-rule in CSS and SCSS files
+-   `@import` at-rule in CSS and SCSS files (including [`pkg:`
+    URLs][sass-pkg-url])
 -   `@use` and `@forward` at-rule as
-    [Sass modules](https://sass-lang.com/documentation/modules)
+    [Sass modules](https://sass-lang.com/documentation/modules) (including
+    [`pkg:` URLs][sass-pkg-url])
 -   `url` declaration value for
     [various declaration properties](<https://developer.mozilla.org/en-US/docs/Web/CSS/url()>)
 
@@ -138,5 +140,6 @@ MIT © [Ivan Nikolić](http://ivannikolic.com)
 
 [ci]: https://github.com/niksy/stylelint-no-unresolved-module/actions?query=workflow%3ACI
 [ci-img]: https://github.com/niksy/stylelint-no-unresolved-module/workflows/CI/badge.svg?branch=master
+[sass-pkg-url]: https://sass-lang.com/documentation/js-api/classes/nodepackageimporter/
 
 <!-- prettier-ignore-end -->

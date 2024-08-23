@@ -228,6 +228,10 @@ runCodeTest({
 			result: []
 		},
 		{
+			input: '@import "pkg:loki";',
+			result: []
+		},
+		{
 			input: '@import "loki/index";',
 			result: []
 		},
@@ -252,7 +256,15 @@ runCodeTest({
 			result: []
 		},
 		{
+			input: '@use "pkg:loki";',
+			result: []
+		},
+		{
 			input: '@forward "loki";',
+			result: []
+		},
+		{
+			input: '@forward "pkg:loki";',
 			result: []
 		},
 		{

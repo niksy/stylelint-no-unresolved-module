@@ -4,6 +4,7 @@
 @import url('./index.css');
 
 @import 'loki';
+@import 'pkg:loki';
 @import 'loki/index';
 
 @use 'sass:list';
