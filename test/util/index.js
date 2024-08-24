@@ -73,7 +73,7 @@ export const runCodeTest = (options) => {
 						}
 					}
 				});
-				const [{ rule, severity, url, ...warning }] = warnings;
+				const [{ rule, severity, url, fix, ...warning }] = warnings;
 				assert.deepEqual(
 					warning,
 					result[0],
@@ -133,7 +133,7 @@ export const runFileTest = (options) => {
 					`Not all warnings have been covered for reject case`
 				);
 				warnings.forEach(
-					({ rule, severity, url, ...warning }, index) => {
+					({ rule, severity, url, fix, ...warning }, index) => {
 						assert.deepEqual(
 							warning,
 							result[index],
