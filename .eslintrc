@@ -9,7 +9,7 @@
 	"plugins": ["eslint-plugin-prettier"],
 	"settings": {
 		"jsdoc": {
-			"preferredTypes": ["postcss", "unknown", "valueParser"]
+			"preferredTypes": ["postcss", "unknown", "valueParser", "Record"]
 		}
 	},
 	"rules": {
