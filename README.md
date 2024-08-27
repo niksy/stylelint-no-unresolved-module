@@ -17,7 +17,7 @@ Nodes which are considered "modules":
 
 Features:
 
--   [`enhanced-resolve`](https://github.com/webpack/enhanced-resolve) to resolve
+-   [`oxc-resolver`](https://github.com/oxc-project/oxc-resolver) to resolve
     each resource
 -   Handling partials for Sass files
 
