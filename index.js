@@ -106,8 +106,15 @@ function ruleFunction(resolveRules) {
 			),
 			(atRule) => {
 				const parsed = parse(atRule.params);
+				let shouldExit = false;
 				parsed.walk((node) => {
-					if (node.type === 'string') {
+					if (
+						['use', 'forward'].includes(atRule.name) &&
+						node.value === 'with'
+					) {
+						shouldExit = true;
+					}
+					if (node.type === 'string' && !shouldExit) {
 						const value = [
 							nodeResolver.resolve(node.value, atRule),
 							sassResolver.resolve(node.value, atRule)

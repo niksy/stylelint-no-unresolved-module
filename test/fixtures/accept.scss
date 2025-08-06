@@ -12,6 +12,14 @@
 @import 'loki/_index';
 @import 'loki/_index.scss';
 
+@use 'sass:list';
+@use 'josie';
+@forward 'josie';
+
+@forward 'loki' with (
+	$path: 'elvis' !default
+);
+
 body {
 	background: url('lulu/annie.css');
 	background: url($heidi);
