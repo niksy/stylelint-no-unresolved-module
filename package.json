@@ -55,6 +55,7 @@
     "@istanbuljs/esm-loader-hook": "^0.2.0",
     "@rollup/plugin-babel": "^5.2.1",
     "@types/is-url": "^1.2.30",
+    "@types/minimatch": "^5.1.2",
     "@types/mocha": "^9.0.0",
     "@types/node": "^16.3.0",
     "@types/scss-parser": "^1.0.1",
