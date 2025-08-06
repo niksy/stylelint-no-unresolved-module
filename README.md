@@ -139,7 +139,7 @@ MIT © [Ivan Nikolić](http://ivannikolic.com)
 <!-- prettier-ignore-start -->
 
 [ci]: https://github.com/niksy/stylelint-no-unresolved-module/actions?query=workflow%3ACI
-[ci-img]: https://github.com/niksy/stylelint-no-unresolved-module/workflows/CI/badge.svg?branch=master
+[ci-img]: https://github.com/niksy/stylelint-no-unresolved-module/actions/workflows/ci.yml/badge.svg?branch=master
 [sass-pkg-url]: https://sass-lang.com/documentation/js-api/classes/nodepackageimporter/
 
 <!-- prettier-ignore-end -->
