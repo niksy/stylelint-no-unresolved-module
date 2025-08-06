@@ -1,6 +1,6 @@
 {
   "name": "stylelint-no-unresolved-module",
-  "version": "2.3.0",
+  "version": "2.4.0",
   "description": "Ensures that module (import-like or `url`) can be resolved to a module on the file system.",
   "license": "MIT",
   "author": "Ivan Nikolić <niksy5@gmail.com> (http://ivannikolic.com)",
