@@ -116,21 +116,21 @@ original file.
 Type: `Object`
 
 A list of module alias configurations or an object which maps key to value. See
-[original documentation](https://github.com/webpack/enhanced-resolve#resolver-options).
+[original documentation](https://github.com/oxc-project/oxc-resolver#options).
 
 ### modules
 
 Type: `string[]`
 
 A list of directories to resolve modules from. See
-[original documentation](https://github.com/webpack/enhanced-resolve#resolver-options).
+[original documentation](https://github.com/oxc-project/oxc-resolver#options).
 
 ### roots
 
 Type: `string[]`
 
 A list of root paths. See
-[original documentation](https://github.com/webpack/enhanced-resolve#resolver-options).
+[original documentation](https://github.com/oxc-project/oxc-resolver#options).
 
 ## License
 
