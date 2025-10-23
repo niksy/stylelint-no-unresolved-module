@@ -2,6 +2,10 @@
 
 ## [Unreleased][]
 
+### Fixed
+
+-   Recursively check for interpolation or variable in string for Sass files
+
 ## [2.5.0][] - 2025-10-23
 
 ### Added

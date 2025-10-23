@@ -488,6 +488,10 @@ runCodeTest({
 		{
 			input: 'body { background: url("#assets/jasmine.css"); }',
 			result: []
+		},
+		{
+			input: 'body { background: url("#lulu/#{$heidi}.css"); }',
+			result: []
 		}
 	],
 	reject: []
