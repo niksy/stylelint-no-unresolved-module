@@ -1,0 +1,11 @@
+{
+	"compilerOptions": {
+		"paths": {
+			"lulu/*": ["./local_modules/assets/*"],
+			"#assets/*": [
+				"./local_modules/theme/assets/*",
+				"./local_modules/assets/*"
+			]
+		}
+	}
+}

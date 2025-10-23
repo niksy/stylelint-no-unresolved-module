@@ -431,3 +431,64 @@ runCodeTest({
 		}
 	]
 });
+
+runFileTest({
+	ruleName: ruleName,
+	config: {
+		tsconfig: {
+			configFile: path.resolve(__dirname, 'fixtures')
+		},
+		modules: ['node_modules', 'local_modules']
+	},
+	accept: [
+		{
+			input: './fixtures/accept.css',
+			result: []
+		},
+		{
+			input: './fixtures/accept.scss',
+			customSyntax: 'postcss-scss',
+			result: []
+		}
+	],
+	reject: []
+});
+
+runCodeTest({
+	ruleName: ruleName,
+	config: {
+		cwd: path.resolve(__dirname, 'fixtures'),
+		tsconfig: {
+			configFile: path.resolve(__dirname, 'fixtures')
+		},
+		modules: ['node_modules', 'local_modules']
+	},
+	accept: [
+		{
+			input: 'body { background: url("lulu/annie.css"); }',
+			result: []
+		}
+	],
+	reject: []
+});
+
+runCodeTest({
+	ruleName: ruleName,
+	config: {
+		cwd: path.resolve(__dirname, 'fixtures'),
+		tsconfig: {
+			configFile: path.resolve(__dirname, 'fixtures')
+		}
+	},
+	accept: [
+		{
+			input: 'body { background: url("#assets/annie.css"); }',
+			result: []
+		},
+		{
+			input: 'body { background: url("#assets/jasmine.css"); }',
+			result: []
+		}
+	],
+	reject: []
+});

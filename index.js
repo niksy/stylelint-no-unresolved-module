@@ -57,6 +57,21 @@ const validateOptions = ajv.compile({
 							}
 						}
 					]
+				},
+				tsconfig: {
+					type: 'object',
+					properties: {
+						configFile: { type: 'string' },
+						references: {
+							anyOf: [
+								{ enum: ['auto'] },
+								{
+									type: 'array',
+									items: { type: 'string' }
+								}
+							]
+						}
+					}
 				}
 			}
 		}

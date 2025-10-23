@@ -2,6 +2,11 @@
 
 ## [Unreleased][]
 
+### Added
+
+-   Support for TypeScript configuration option
+    ([#7](https://github.com/niksy/stylelint-no-unresolved-module/issues/7))
+
 ## [2.4.0][] - 2025-08-06
 
 ### Changed

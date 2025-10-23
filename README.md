@@ -132,6 +132,13 @@ Type: `string[]`
 A list of root paths. See
 [original documentation](https://github.com/oxc-project/oxc-resolver#options).
 
+### tsconfig
+
+Type: `object`
+
+TypeScript related config for resolver. See
+[original documentation](https://github.com/oxc-project/oxc-resolver#typescript-configuration).
+
 ## License
 
 MIT © [Ivan Nikolić](http://ivannikolic.com)
