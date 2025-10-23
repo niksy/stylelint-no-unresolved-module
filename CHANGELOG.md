@@ -2,6 +2,8 @@
 
 ## [Unreleased][]
 
+## [2.5.0][] - 2025-10-23
+
 ### Added
 
 -   Support for TypeScript configuration option
@@ -102,7 +104,11 @@
 [2.2.2]: https://github.com/niksy/stylelint-no-unresolved-module/tree/v2.2.2
 [2.3.0]: https://github.com/niksy/stylelint-no-unresolved-module/tree/v2.3.0
 [Unreleased]:
-	https://github.com/niksy/stylelint-no-unresolved-module/compare/v2.4.0...HEAD
+	https://github.com/niksy/stylelint-no-unresolved-module/compare/v2.5.0...HEAD
+[2.5.0]: https://github.com/niksy/stylelint-no-unresolved-module/tree/v2.5.0
+
+    https://github.com/niksy/stylelint-no-unresolved-module/compare/v2.4.0...HEAD
+
 [2.4.0]: https://github.com/niksy/stylelint-no-unresolved-module/tree/v2.4.0
 
     https://github.com/niksy/stylelint-no-unresolved-module/compare/v2.3.0...HEAD
