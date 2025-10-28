@@ -2,6 +2,8 @@
 
 ## [Unreleased][]
 
+## [2.5.2][] - 2025-10-28
+
 ### Changed
 
 -   Handle edge cases for interpolation
@@ -114,7 +116,11 @@
 [2.2.2]: https://github.com/niksy/stylelint-no-unresolved-module/tree/v2.2.2
 [2.3.0]: https://github.com/niksy/stylelint-no-unresolved-module/tree/v2.3.0
 [Unreleased]:
-	https://github.com/niksy/stylelint-no-unresolved-module/compare/v2.5.1...HEAD
+	https://github.com/niksy/stylelint-no-unresolved-module/compare/v2.5.2...HEAD
+[2.5.2]: https://github.com/niksy/stylelint-no-unresolved-module/tree/v2.5.2
+
+    https://github.com/niksy/stylelint-no-unresolved-module/compare/v2.5.1...HEAD
+
 [2.5.1]: https://github.com/niksy/stylelint-no-unresolved-module/tree/v2.5.1
 
     https://github.com/niksy/stylelint-no-unresolved-module/compare/v2.5.0...HEAD
