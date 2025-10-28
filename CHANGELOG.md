@@ -2,6 +2,10 @@
 
 ## [Unreleased][]
 
+### Changed
+
+-   Handle edge cases for interpolation
+
 ## [2.5.1][] - 2025-10-23
 
 ### Fixed

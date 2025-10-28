@@ -412,6 +412,10 @@ runCodeTest({
 		{
 			input: 'body { background: url("assets/jasmine.css"); }',
 			result: []
+		},
+		{
+			input: 'body { background: url("https://sparky.com/assets/jasmine.css"); }',
+			result: []
 		}
 	],
 	reject: [
@@ -491,6 +495,18 @@ runCodeTest({
 		},
 		{
 			input: 'body { background: url("#lulu/#{$heidi}.css"); }',
+			result: []
+		},
+		{
+			input: 'body { background: url("https://sparky.com/#lulu/#{$heidi}.css"); }',
+			result: []
+		},
+		{
+			input: 'body { background: url("src:/#lulu/#{$heidi}.css"); }',
+			result: []
+		},
+		{
+			input: 'body { background: url("src:#lulu/#{$heidi}.css"); }',
 			result: []
 		}
 	],
